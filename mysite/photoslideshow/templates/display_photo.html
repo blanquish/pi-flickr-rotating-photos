@@ -1,0 +1,23 @@
+<script src="jquery-2.1.1.min.js"></script>
+
+<h2>Photos from Vivid Sydney</h2>
+
+<div id="home">
+    <div class="photo-carousel">
+
+        <ul class="items">
+
+            <li class="current">
+                <img src="{{ firstphoto.url }}" alt="{{ firstphoto.title }}" />
+            </li>
+
+            {% for p in photos %}
+            <li>
+                <img src="{{ p.url }}" alt="{{ p.title }}" />
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+
